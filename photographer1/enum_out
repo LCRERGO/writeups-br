@@ -1,0 +1,339 @@
+Starting enum4linux v0.8.9 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Tue Aug 11 14:51:57 2020
+
+ ========================== 
+|    Target Information    |
+ ========================== 
+Target ........... 192.168.0.24
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+ ==================================================== 
+|    Enumerating Workgroup/Domain on 192.168.0.24    |
+ ==================================================== 
+[+] Got domain/workgroup name: WORKGROUP
+
+ ============================================ 
+|    Nbtstat Information for 192.168.0.24    |
+ ============================================ 
+Looking up status of 192.168.0.24
+	PHOTOGRAPHER    <00> -         B <ACTIVE>  Workstation Service
+	PHOTOGRAPHER    <03> -         B <ACTIVE>  Messenger Service
+	PHOTOGRAPHER    <20> -         B <ACTIVE>  File Server Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+	WORKGROUP       <1e> - <GROUP> B <ACTIVE>  Browser Service Elections
+
+	MAC Address = 00-00-00-00-00-00
+
+ ===================================== 
+|    Session Check on 192.168.0.24    |
+ ===================================== 
+[+] Server 192.168.0.24 allows sessions using username '', password ''
+
+ =========================================== 
+|    Getting domain SID for 192.168.0.24    |
+ =========================================== 
+Unable to initialize messaging context
+Domain Name: WORKGROUP
+Domain Sid: (NULL SID)
+[+] Can't determine if host is part of domain or part of a workgroup
+
+ ====================================== 
+|    OS information on 192.168.0.24    |
+ ====================================== 
+[+] Got OS info for 192.168.0.24 from smbclient: 
+[+] Got OS info for 192.168.0.24 from srvinfo:
+Unable to initialize messaging context
+	PHOTOGRAPHER   Wk Sv PrQ Unx NT SNT photographer server (Samba, Ubuntu)
+	platform_id     :	500
+	os version      :	6.1
+	server type     :	0x809a03
+
+ ============================= 
+|    Users on 192.168.0.24    |
+ ============================= 
+
+
+ ========================================= 
+|    Share Enumeration on 192.168.0.24    |
+ ========================================= 
+Unable to initialize messaging context
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	sambashare      Disk      Samba on Ubuntu
+	IPC$            IPC       IPC Service (photographer server (Samba, Ubuntu))
+Reconnecting with SMB1 for workgroup listing.
+
+	Server               Comment
+	---------            -------
+
+	Workgroup            Master
+	---------            -------
+	WORKGROUP            JONATHAS-PC
+
+[+] Attempting to map shares on 192.168.0.24
+//192.168.0.24/print$	Mapping: DENIED, Listing: N/A
+//192.168.0.24/sambashare	Mapping: OK, Listing: OK
+//192.168.0.24/IPC$	[E] Can't understand response:
+Unable to initialize messaging context
+NT_STATUS_OBJECT_NAME_NOT_FOUND listing \*
+
+ ==================================================== 
+|    Password Policy Information for 192.168.0.24    |
+ ==================================================== 
+[E] Unexpected error from polenum.py:
+Traceback (most recent call last):
+  File "/home/lcr/.local/bin/polenum.py", line 33, in <module>
+    from impacket.dcerpc import dcerpc_v4, dcerpc, transport, samr
+ImportError: cannot import name dcerpc_v4
+[+] Retieved partial password policy with rpcclient:
+
+Password Complexity: Disabled
+Minimum Password Length: 5
+
+
+ ============================== 
+|    Groups on 192.168.0.24    |
+ ============================== 
+
+[+] Getting builtin groups:
+
+[+] Getting builtin group memberships:
+
+[+] Getting local groups:
+
+[+] Getting local group memberships:
+
+[+] Getting domain groups:
+
+[+] Getting domain group memberships:
+
+ ======================================================================= 
+|    Users on 192.168.0.24 via RID cycling (RIDS: 500-550,1000-1050)    |
+ ======================================================================= 
+[I] Found new SID: S-1-22-1
+[I] Found new SID: S-1-5-21-3693138109-3993630114-3057792995
+[I] Found new SID: S-1-5-32
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''
+S-1-5-32-500 *unknown*\*unknown* (8)
+S-1-5-32-501 *unknown*\*unknown* (8)
+S-1-5-32-502 *unknown*\*unknown* (8)
+S-1-5-32-503 *unknown*\*unknown* (8)
+S-1-5-32-504 *unknown*\*unknown* (8)
+S-1-5-32-505 *unknown*\*unknown* (8)
+S-1-5-32-506 *unknown*\*unknown* (8)
+S-1-5-32-507 *unknown*\*unknown* (8)
+S-1-5-32-508 *unknown*\*unknown* (8)
+S-1-5-32-509 *unknown*\*unknown* (8)
+S-1-5-32-510 *unknown*\*unknown* (8)
+S-1-5-32-511 *unknown*\*unknown* (8)
+S-1-5-32-512 *unknown*\*unknown* (8)
+S-1-5-32-513 *unknown*\*unknown* (8)
+S-1-5-32-514 *unknown*\*unknown* (8)
+S-1-5-32-515 *unknown*\*unknown* (8)
+S-1-5-32-516 *unknown*\*unknown* (8)
+S-1-5-32-517 *unknown*\*unknown* (8)
+S-1-5-32-518 *unknown*\*unknown* (8)
+S-1-5-32-519 *unknown*\*unknown* (8)
+S-1-5-32-520 *unknown*\*unknown* (8)
+S-1-5-32-521 *unknown*\*unknown* (8)
+S-1-5-32-522 *unknown*\*unknown* (8)
+S-1-5-32-523 *unknown*\*unknown* (8)
+S-1-5-32-524 *unknown*\*unknown* (8)
+S-1-5-32-525 *unknown*\*unknown* (8)
+S-1-5-32-526 *unknown*\*unknown* (8)
+S-1-5-32-527 *unknown*\*unknown* (8)
+S-1-5-32-528 *unknown*\*unknown* (8)
+S-1-5-32-529 *unknown*\*unknown* (8)
+S-1-5-32-530 *unknown*\*unknown* (8)
+S-1-5-32-531 *unknown*\*unknown* (8)
+S-1-5-32-532 *unknown*\*unknown* (8)
+S-1-5-32-533 *unknown*\*unknown* (8)
+S-1-5-32-534 *unknown*\*unknown* (8)
+S-1-5-32-535 *unknown*\*unknown* (8)
+S-1-5-32-536 *unknown*\*unknown* (8)
+S-1-5-32-537 *unknown*\*unknown* (8)
+S-1-5-32-538 *unknown*\*unknown* (8)
+S-1-5-32-539 *unknown*\*unknown* (8)
+S-1-5-32-540 *unknown*\*unknown* (8)
+S-1-5-32-541 *unknown*\*unknown* (8)
+S-1-5-32-542 *unknown*\*unknown* (8)
+S-1-5-32-543 *unknown*\*unknown* (8)
+S-1-5-32-544 BUILTIN\Administrators (Local Group)
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+S-1-5-32-1000 *unknown*\*unknown* (8)
+S-1-5-32-1001 *unknown*\*unknown* (8)
+S-1-5-32-1002 *unknown*\*unknown* (8)
+S-1-5-32-1003 *unknown*\*unknown* (8)
+S-1-5-32-1004 *unknown*\*unknown* (8)
+S-1-5-32-1005 *unknown*\*unknown* (8)
+S-1-5-32-1006 *unknown*\*unknown* (8)
+S-1-5-32-1007 *unknown*\*unknown* (8)
+S-1-5-32-1008 *unknown*\*unknown* (8)
+S-1-5-32-1009 *unknown*\*unknown* (8)
+S-1-5-32-1010 *unknown*\*unknown* (8)
+S-1-5-32-1011 *unknown*\*unknown* (8)
+S-1-5-32-1012 *unknown*\*unknown* (8)
+S-1-5-32-1013 *unknown*\*unknown* (8)
+S-1-5-32-1014 *unknown*\*unknown* (8)
+S-1-5-32-1015 *unknown*\*unknown* (8)
+S-1-5-32-1016 *unknown*\*unknown* (8)
+S-1-5-32-1017 *unknown*\*unknown* (8)
+S-1-5-32-1018 *unknown*\*unknown* (8)
+S-1-5-32-1019 *unknown*\*unknown* (8)
+S-1-5-32-1020 *unknown*\*unknown* (8)
+S-1-5-32-1021 *unknown*\*unknown* (8)
+S-1-5-32-1022 *unknown*\*unknown* (8)
+S-1-5-32-1023 *unknown*\*unknown* (8)
+S-1-5-32-1024 *unknown*\*unknown* (8)
+S-1-5-32-1025 *unknown*\*unknown* (8)
+S-1-5-32-1026 *unknown*\*unknown* (8)
+S-1-5-32-1027 *unknown*\*unknown* (8)
+S-1-5-32-1028 *unknown*\*unknown* (8)
+S-1-5-32-1029 *unknown*\*unknown* (8)
+S-1-5-32-1030 *unknown*\*unknown* (8)
+S-1-5-32-1031 *unknown*\*unknown* (8)
+S-1-5-32-1032 *unknown*\*unknown* (8)
+S-1-5-32-1033 *unknown*\*unknown* (8)
+S-1-5-32-1034 *unknown*\*unknown* (8)
+S-1-5-32-1035 *unknown*\*unknown* (8)
+S-1-5-32-1036 *unknown*\*unknown* (8)
+S-1-5-32-1037 *unknown*\*unknown* (8)
+S-1-5-32-1038 *unknown*\*unknown* (8)
+S-1-5-32-1039 *unknown*\*unknown* (8)
+S-1-5-32-1040 *unknown*\*unknown* (8)
+S-1-5-32-1041 *unknown*\*unknown* (8)
+S-1-5-32-1042 *unknown*\*unknown* (8)
+S-1-5-32-1043 *unknown*\*unknown* (8)
+S-1-5-32-1044 *unknown*\*unknown* (8)
+S-1-5-32-1045 *unknown*\*unknown* (8)
+S-1-5-32-1046 *unknown*\*unknown* (8)
+S-1-5-32-1047 *unknown*\*unknown* (8)
+S-1-5-32-1048 *unknown*\*unknown* (8)
+S-1-5-32-1049 *unknown*\*unknown* (8)
+S-1-5-32-1050 *unknown*\*unknown* (8)
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''
+S-1-22-1-1000 Unix User\daisa (Local User)
+S-1-22-1-1001 Unix User\agi (Local User)
+[+] Enumerating users using SID S-1-5-21-3693138109-3993630114-3057792995 and logon username '', password ''
+S-1-5-21-3693138109-3993630114-3057792995-500 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-501 PHOTOGRAPHER\nobody (Local User)
+S-1-5-21-3693138109-3993630114-3057792995-502 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-503 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-504 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-505 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-506 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-507 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-508 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-509 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-510 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-511 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-512 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-513 PHOTOGRAPHER\None (Domain Group)
+S-1-5-21-3693138109-3993630114-3057792995-514 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-515 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-516 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-517 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-518 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-519 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-520 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-521 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-522 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-523 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-524 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-525 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-526 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-527 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-528 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-529 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-530 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-531 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-532 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-533 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-534 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-535 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-536 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-537 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-538 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-539 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-540 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-541 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-542 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-543 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-544 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-545 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-546 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-547 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-548 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-549 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-550 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1000 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1001 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1002 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1003 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1004 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1005 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1006 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1007 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1008 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1009 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1010 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1011 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1012 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1013 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1014 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1015 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1016 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1017 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1018 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1019 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1020 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1021 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1022 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1023 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1024 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1025 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1026 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1027 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1028 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1029 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1030 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1031 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1032 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1033 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1034 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1035 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1036 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1037 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1038 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1039 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1040 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1041 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1042 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1043 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1044 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1045 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1046 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1047 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1048 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1049 *unknown*\*unknown* (8)
+S-1-5-21-3693138109-3993630114-3057792995-1050 *unknown*\*unknown* (8)
+
+ ============================================= 
+|    Getting printer info for 192.168.0.24    |
+ ============================================= 
+Unable to initialize messaging context
+No printers returned.
+
+
+enum4linux complete on Tue Aug 11 14:52:13 2020
+

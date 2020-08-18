@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Tue Aug 11 12:00:57 2020 as: nmap -sP -oN ip_numbers 192.168.0.0/24
+Nmap scan report for 192.168.0.1
+Host is up (0.0046s latency).
+Nmap scan report for 192.168.0.3
+Host is up (0.0053s latency).
+Nmap scan report for 192.168.0.8
+Host is up (0.0070s latency).
+Nmap scan report for 192.168.0.9
+Host is up (0.016s latency).
+Nmap scan report for 192.168.0.10
+Host is up (0.014s latency).
+Nmap scan report for 192.168.0.15
+Host is up (0.0018s latency).
+Nmap scan report for 192.168.0.16
+Host is up (0.0083s latency).
+Nmap scan report for 192.168.0.17
+Host is up (0.017s latency).
+Nmap scan report for 192.168.0.18
+Host is up (0.019s latency).
+Nmap scan report for 192.168.0.24
+Host is up (0.0012s latency).
+# Nmap done at Tue Aug 11 12:01:02 2020 -- 256 IP addresses (10 hosts up) scanned in 4.38 seconds
